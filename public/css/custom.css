@@ -1,0 +1,31 @@
+.slick-arrow {
+    z-index: 1;
+}
+
+.slick-arrow.slick-next {
+    right: -16px;
+    transform: none;
+}
+
+.slick-arrow.slick-next:before {
+    color: black;
+    font-size: 35px;
+}
+
+.slick-arrow.slick-prev {
+    left: -32px;
+    transform: none;
+
+}
+
+.slick-arrow.slick-prev:before {
+    color: black;
+    font-size: 35px;
+}
+
+#loading-overlay .spinner-border {
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(42, 64, 45);;
+    border-right-color: transparent;
+}

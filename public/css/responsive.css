@@ -1,0 +1,352 @@
+/* Thiết lập cho màn hình nhỏ (di động) */
+@media (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slick-arrow.slick-next {
+        right: -5px;
+        transform: none;
+    }
+
+    .container { 
+        padding: 0 !important;
+    }
+
+    .section {
+        padding: 20px 0;
+    }
+
+    .section-1 .active-navbar {
+        display: block;
+    }
+
+    .section-1 .container {
+        padding-right: calc(var(--bs-gutter-x)* .5) !important;
+        padding-left: calc(var(--bs-gutter-x)* .5) !important;
+    }
+
+    .section-1, .section-2 {
+        padding: 50px 0;
+    }
+
+    .section-1 .navbar-web {
+        display: none;
+    }
+
+    .section-1 .title {
+        font-size: 50px;
+    }
+
+    /* section 2 */
+    .section-2 .wellcome-list .wellcome-items .detail-content .detail-content-title {
+        font-size: 35px;
+    }
+    .section-2 .header-content {
+        font-size: 50px;
+    }
+
+    .section-2 .content .custom-border-left {
+        left: 5px;
+    }
+
+    .section-2 .content .custom-border-right {
+        right: 0px !important;
+        bottom: -45px !important;
+    }
+
+    .section-2 .wellcome-list .col-lg-4:nth-child(3) .wellcome-items {
+        width: 100% !important;
+    }
+
+    .section-2 .wellcome-list .wellcome-items {
+        margin: 10px;
+    }
+
+    /* section 3 */
+    .section-3 .header-content {
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-3 .decor-1 {
+        top: -320px;
+    }
+
+    .section-3 .about-list .about-items { 
+        margin-bottom: 20px;
+        height: 500px;
+    }
+
+    .section-3 .about-list .col-lg-4:nth-child(2) {
+        margin-top: 0;
+    }
+
+    /* section 4 */
+    .section-4 {
+        padding-bottom: 0;
+    }
+
+    .section-4 .content-desc {
+        padding: 0 40px;
+    }
+
+    .section-4 .content-desc .text-top {
+        font-size: 40px;
+    }
+
+    .section-4 .content-desc .text-title {
+        font-size: 45px;
+    }
+
+    .section-4 .content-desc ul.text-desc li {
+        font-size: 30px;
+    }
+
+    .section-4 .img-frame {
+        padding: 15px;
+        margin: auto;
+        width: 70%;
+    }
+
+    .section-4 .content-desc .text-desc {
+        margin-top: 0;
+    }
+
+    .section-4 .img-frame .img-wrapper {
+        height: 400px;
+    }
+
+    /* section 5 */
+    .section-5 {
+        padding-top: 0;
+    }
+
+    .section-5 .content-desc {
+        padding: 0 40px;
+    }
+
+    .section-5 .content-desc .text-top {
+        font-size: 40px;
+    }
+
+    .section-5 .content-desc .text-title {
+        font-size: 45px;
+    }
+
+    .section-5 .content-desc ul.text-desc li {
+        font-size: 30px;
+    }
+
+    .section-5 .content-desc .line {
+        margin-top: 20px;
+    }
+
+    .section-5 .row {
+        flex-direction: column-reverse;
+    }
+
+    .section-5 .img-frame {
+        padding: 15px;
+        margin: auto;
+        width: 70%;
+    }
+
+    .section-5 .content-desc .text-desc {
+        margin-top: 0;
+    }
+
+    .section-5 .img-frame .img-wrapper {
+        height: 400px;
+    }
+
+    /* section 6 */
+    .section-6 .header-content {
+        width: 100%;
+    }    
+
+    .section-6 .header-content .title {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .section-6 .header-content .decs {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section-6 .decor-1 {
+        top: -260px;
+        right: -131px;
+    }
+
+    .section-6 .slide-album .slide-item .wrap-img img {
+        transform: scale(1) !important;
+    }
+
+    .section-6 .album-main { 
+        width: 80% !important;
+        height: 500px;
+    }
+
+    /* section 7 */
+    .section-7 .header-content {
+        font-size: 60px;
+    }
+
+    .section-7 .decor-1 {
+        top: -280px;
+    }
+
+    .section-7 .decor-3 {
+        top: -300px;
+    }
+
+    .section-7 .decor-2 {
+        top: -140px;
+    }
+
+    /* section 8 */
+    .section-8 .thanks-content .title {
+        font-size: 60px;
+    }
+
+    .section-8 .decor-1, .section-8 .decor-2 {
+        top: -300px;
+    }
+
+    /* section 9 */
+    .section-9 .main-content .form-apply .form-title {
+        font-size: 40px;
+    }
+
+    .section-9 .main-content .form-apply {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .section-9 .main-content .form-apply .form-title, .section-9 .main-content .form-apply .form-options, .section-9 .form-submit {
+        padding: 0 20px;
+    }
+
+    .section-9 .main-content .form-apply .form-options .options {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-9 .main-content .form-apply .form-submit .title {
+        font-size: 40px;
+    }
+
+    .section-9 .main-content .form-apply .form-submit .form-input {
+        font-size: 20px;
+    }
+
+    /* section 10 */
+    .section-10 .header-content {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .section-10 .header-title {
+        font-size: 30px;
+    }
+
+    /* section 11 */
+    .section-11 .gift { 
+        font-size: 50px;
+    }
+
+    .section-11 .gift img { 
+        width: 100px;
+        height: 100px;
+    }
+
+    .section-11 .gift .message {
+        font-size: 70px;
+    }   
+    
+
+}
+
+
+/* Thiết lập cho tablet */
+@media (max-width: 769px) {
+    /* section 2 */
+    .section-2 .header-content {
+        text-align: center;
+    }
+
+    .section-2 .wellcome-list .col-lg-4:nth-child(3) .wellcome-items {
+        width: 45%;
+        margin: 20px auto 0;
+    }
+
+    .section-2 .wellcome-list .col-lg-4:nth-child(1) .wellcome-items .image-content img {
+        transform: scale(2);
+    }
+
+    .section-2 .wellcome-list .col-lg-4:nth-child(3) .wellcome-items .image-content img {
+        transform: scale(2);
+    }
+
+    /* section 6 */
+    .section-6 .slide-album {
+        border-bottom: 0;
+    }
+
+    .section-6 .album-main {
+        width: 60%;
+        margin: 20px auto 0;
+    }
+
+    /* section 8 */
+    .section-8 .thanks-content {
+        text-align: center;
+    }
+
+    .section-8 .album-main {
+        margin-top: 20px;
+    }
+}
+  
+/* Thiết lập cho màn hình trung bình (tablet) */
+@media (max-width: 1024px) {
+
+    /* section-2 */
+    .section-2 .content .custom-border-left {
+        left: 0px;
+    }
+
+    .section-2 .content .custom-border-right {
+        right: 0px;
+    }
+
+    /* section 6 */
+    .section-6 .slide-album .slide-item {
+        height: 350px;
+    }
+
+    .section-6 .slide-album .slide-item .wrap-img img {
+        transform: scale(1.75);
+    }
+
+    .section-6 .album-main .wrap-img img {
+        width: unset;
+    }
+}
+  
+/* Thiết lập cho màn hình lớn (desktop) */
+@media (min-width: 1025px) {
+    .section-2 .wellcome-list .col-lg-4:nth-child(1) .wellcome-items .image-content img {
+        transform: scale(2.25);
+    }
+
+    .section-2 .wellcome-list .col-lg-4:nth-child(3) .wellcome-items .image-content img {
+        transform: scale(2.25);
+        
+    }
+}
