@@ -5,6 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <!-- Tiêu đề hiển thị khi chia sẻ -->
+        <meta property="og:title" content="Tiêu đề của trang web" />
+
+        <!-- Mô tả ngắn gọn về nội dung trang web -->
+        <meta property="og:description" content="Mô tả ngắn gọn về trang web của bạn." />
+
+        <!-- URL của hình ảnh hiển thị khi chia sẻ -->
+        <meta property="og:image" content="{{ asset('images/section-1.jpg') }}" />
+
+        <!-- URL của trang web -->
+        <meta property="og:url" content="{{ env("APP_URL") }}" />
+
+        <!-- Xác định kiểu nội dung (website) -->
+        <meta property="og:type" content="website" />
+
+        <!-- Tên trang hoặc tên website (không bắt buộc nhưng nên có) -->
+        <meta property="og:site_name" content="Tên trang web của bạn" />
+
         <title>My Wedding</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -736,7 +754,10 @@
             {{-- <audio id="myAudio" controls autoplay>
                 <source src="{{ asset('audio/I-Do.mp3') }}" type="audio/mpeg">
             </audio> --}}
-
+            <audio id="myAudio" controls autoplay>
+                <source src="./audio/I-Do.mp3" type="audio/mpeg">
+            </audio>
+            <button id="startButton" class="play-button">Bắt đầu</button>
             {{-- <iframe id='video-outlet' src='./audio/I-Do.mp3' width='640' height='480' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe hidden> --}}
         </div>
     
@@ -754,18 +775,6 @@
             });
             let bussy = false;
             new WOW().init();
-
-            // const audio = document.getElementById("myAudio");
-            // audio.play()
-            // audio.stop()
-
-            const audio = document.getElementById("myAudio");
-            // audio.play()
-
-            setTimeout(() => {
-                audio.play()
-            }, 1000); 
-        
 
             function runLoading() {
                 let i = 0;
@@ -805,8 +814,19 @@
                     }
                 }, 150);
             }
-
             runLoading()
+
+            $('#startButton').on('click', function() {
+                const audio = document.getElementById("myAudio");
+                audio.play().catch(error => {
+                    console.error("Không thể phát nhạc tự động:", error);
+                });
+            });
+
+            // $(document).one('click touchstart', function() {
+            //     $('#startButton').trigger('click');
+            // });
+
 
             $(document).on('click', '[data-click="menuToggle"]', function (e) {
                 $('.navbar-mobile').toggleClass('active')
