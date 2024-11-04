@@ -12,7 +12,7 @@
         <meta property="og:description" content="Mô tả ngắn gọn về trang web của bạn." />
 
         <!-- URL của hình ảnh hiển thị khi chia sẻ -->
-        <meta property="og:image" content="{{ asset('images/section-1.jpg') }}" />
+        <meta property="og:image" content="{{ asset('images/preview.jpg') }}" />
 
         <!-- URL của trang web -->
         <meta property="og:url" content="{{ env("APP_URL") }}" />
