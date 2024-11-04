@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
         <link rel="stylesheet" href="{{ asset('css/font.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}?v={{ time() }}">
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
         <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
@@ -717,6 +717,9 @@
                 <div class="progress-number raleway-regular">
                     0%
                 </div>
+                <div class="toggle-button-music mt-3">
+                    <img src="{{ asset('images/play-button-2.svg') }}" alt="">
+                </div>
             </div>
     
             <div class="modal fade" id="giftModal" tabindex="-1" aria-labelledby="giftModalLabel" aria-hidden="true">
@@ -754,10 +757,13 @@
             {{-- <audio id="myAudio" controls autoplay>
                 <source src="{{ asset('audio/I-Do.mp3') }}" type="audio/mpeg">
             </audio> --}}
-            <audio id="myAudio" controls autoplay>
+            <audio id="myAudio" controls autoplay data-value="false" style="display: none">
                 <source src="./audio/I-Do.mp3" type="audio/mpeg">
             </audio>
-            <button id="startButton" class="play-button">Bắt đầu</button>
+
+            <div class="toggle-button-music sticky">
+                <img src="{{ asset('images/play-button-2.svg') }}" alt="">
+            </div>
             {{-- <iframe id='video-outlet' src='./audio/I-Do.mp3' width='640' height='480' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe hidden> --}}
         </div>
     
@@ -816,16 +822,20 @@
             }
             runLoading()
 
-            $('#startButton').on('click', function() {
+            $('.toggle-button-music').on('click', function() {
                 const audio = document.getElementById("myAudio");
-                audio.play().catch(error => {
-                    console.error("Không thể phát nhạc tự động:", error);
-                });
-            });
+                const isPlaying = $('#myAudio').attr('data-value') === 'true';
 
-            // $(document).one('click touchstart', function() {
-            //     $('#startButton').trigger('click');
-            // });
+                if (isPlaying) {
+                    audio.pause();
+                    $('.toggle-button-music img').attr("src", "images/play-button-2.svg");
+                } else {
+                    audio.play();
+                    $('.toggle-button-music img').attr("src", "images/stop-button-2.svg");
+                }
+
+                $('#myAudio').attr('data-value', !isPlaying);
+            });
 
 
             $(document).on('click', '[data-click="menuToggle"]', function (e) {
