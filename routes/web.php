@@ -18,4 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/test', [SendMailController::class, 'test']);
+
 Route::post('/send-mail', [SendMailController::class, 'sendMail']);
